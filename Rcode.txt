@@ -1,0 +1,10 @@
+stats <- data.frame(
+  Stat = c("Kills", "Blocks", "Digs", "Aces", "Assists", "Errors"),
+  Value = c(25, 8, 35, 6, 20, 12)
+)
+
+# Create a pie chart
+pie(stats$Value, labels = stats$Stat, main = "Volleyball Game Statistics",
+    col = rainbow(length(stats$Value)))
+legend("topright", legend = stats$Stat, fill = rainbow(length(stats$Value)),
+       cex = 0.8)
